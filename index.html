@@ -13,7 +13,33 @@
         <h2>Content</h2>
         <ul>
             <li><a href="#servlet-description">1. Servlet description</a></li>
-            <li><a href="#comparison-intranet-extranet-internet">2. comparison intranet, extranet, internet</a></li>
+        <li><a href="#comparison-intranet-extranet-internet">2. Comparison intranet, extranet, internet</a></li>
+        <li><a href="#ipv4-vs-ipv6">3. IPv4 vs IPv6</a></li>
+        <li><a href="#http-protocol">4. HTTP protocol</a></li>
+        <li><a href="#url-components">5. URL components</a></li>
+        <li><a href="#dynamic-routing-vs-static-routing">6. Dynamic routing vs Static routing</a></li>
+        <li><a href="#http-get-vs-post">7. HTTP GET vs POST</a></li>
+        <li><a href="#tcp-vs-udp">8. TCP vs UDP</a></li>
+        <li><a href="#ftp-transmission-modes">9. FTP transmission modes</a></li>
+        <li><a href="#smtp">10. SMTP</a></li>
+        <li><a href="#pre-and-del-tags">11. Pre and Del tags</a></li>
+        <li><a href="#scripting-features">12. Scripting features</a></li>
+        <li><a href="#xml-superior-html-parser-types">13. XML superior HTML parser types</a></li>
+        <li><a href="#html-image-map-xml-tree">14. HTML image map XML tree</a></li>
+        <li><a href="#web-browser-cookies">15. Web browser cookies</a></li>
+        <li><a href="#difference-applet-java-application">16. Difference applet Java application</a></li>
+        <li><a href="#applet">17. Applet</a></li>
+        <li><a href="#java-socket">18. Java Socket</a></li>
+        <li><a href="#jsp-architecture">19. JSP architecture</a></li>
+        <li><a href="#web-container-servlet-engine">20. Web container & Servlet engine</a></li>
+        <li><a href="#attacks">21. Active and Passive attacks</a></li>
+        <li><a href="#dos_rtp">22. Denial of Service (DoS) attacks & Real-time Transport Protocol (RTP)</a></li>
+        <li><a href="#proxy_purpose">23. Proxy purpose</a></li>
+        <li><a href="#packet_filtering">24. Packet filtering</a></li>
+        <li><a href="#proxy_firewall">25. Proxy firewall</a></li>
+        <li><a href="#three_way_handshake">26. Three way handshaking TCP connection establishment</a></li>
+        <li><a href="#vpn">27. VPN</a></li>
+        <li><a href="#mta">28. Mail Transfer Agent</a></li>
 
         </ul>
     </div>
@@ -587,6 +613,253 @@
                 </table>
             </section>
             
+            <section id="applet">
+                <h2>17. What is an Applet? Discuss the life cycle of an Applet. Give one example of passing parameters in Applet.</h2>
+                <p>An applet is a Java program that runs in a Web browser. An applet can be a fully functional Java application because it has the entire Java API at its disposal.</p>
+                <ul>
+                    <li>It cannot run independently but requires APIs for its.</li>
+                    <li>A Java applet does not require any prior installation.</li>
+                </ul>
+                <h3>Applet Life Cycle:</h3>
+                <ol>
+                    <li>init − This method is intended for whatever initialization is needed for your applet.</li>
+                    <li>start − This method is automatically called after the browser calls the init method.</li>
+                    <li>stop − This method is automatically called when the user moves off the page on which the applet sits.</li>
+                    <li>destroy − This method is only called when the browser shuts down normally.</li>
+                    <li>paint − Invoked immediately after the start() method, and also any time the applet needs to repaint itself in the browser.</li>
+                </ol>
+                <p>Parameter in Applet: We can get any information from the HTML file as a parameter. For this purpose, Applet class provides a method named getParameter().</p>
+                <p>Syntax: public String getParameter(String parameterName).</p>
+            </section>
+
+            <section id="java-socket">
+                <h2>18. Write a short note on Java Socket.</h2>
+                <p>Java Socket is an endpoint for communication between two machines over a network. It enables bidirectional data flow between a client program and a server program.</p>
+                <ul>
+                    <li>Java Socket programming is used for communication between the applications running on different JRE.</li>
+                    <li>Java Socket programming can be connection-oriented or connection-less.</li>
+                </ul>
+                <h3>Socket Classes:</h3>
+                <ol>
+                    <li>Socket: Represents a client-side endpoint of a connection.</li>
+                    <li>ServerSocket: Represents a server-side endpoint that listens for incoming connections from client sockets.</li>
+                </ol>
+                <h3>Communication Protocol:</h3>
+                <p>Sockets in Java support various communication protocols, TCP provides reliable, connection-oriented communication, while UDP offers faster, connectionless communication.</p>
+                <h3>Usage:</h3>
+                <p>Java sockets are used to implement various network applications, such as client-server applications, web servers, chat applications, and distributed systems.</p>
+                <h3>Socket Operations:</h3>
+                <ol>
+                    <li>Establishing Connection: Client sockets connect to a server socket by specifying the server's IP address and port number.</li>
+                    <li>Sending and Receiving Data: Sockets facilitate the exchange of data between client and server using input and output streams (InputStream and OutputStream).</li>
+                    <li>Closing Connection: Sockets should be properly closed using the close() method to release network resources after communication is complete.</li>
+                </ol>
+            </section>
+
+            <section id="jsp-architecture">
+                <h2>19. Explain about JSP architecture.</h2>
+                <p>JavaServer Pages (JSP) is a technology used to develop dynamic web pages in Java.</p>
+                <p>JSP architecture is a 3-tier architecture that separates a web application's presentation, logic, and data layers.</p>
+                <h3>Layers of JSP Architecture:</h3>
+    <ul>
+        <li>The presentation layer, or client side, is responsible for displaying the user interface and handling user interaction.</li>
+        <li>The logic layer, or server-side, is responsible for processing user requests and handling business logic.</li>
+        <li>The data layer is responsible for storing and retrieving data from a database or other storage system.</li>
+    </ul>
+                <h3>Components of JSP Architecture:</h3>
+                <ul>
+                    <li>JSP pages: These are the main building blocks of a JSP application. They contain a combination of HTML, XML, and JSP elements that generate dynamic content.</li>
+                    <li>Servlets: JSP pages are converted into servlets by the JSP engine. Servlets are Java classes that handle HTTP requests and generate dynamic content.</li>
+                    <li>JSP engine (web container): This web server component is responsible for processing JSP pages. It converts JSP pages into servlets, compiles them, and runs them in the Java Virtual Machine (JVM).</li>
+                </ul>
+            </section>
+            
+
+            <section id="web-container-servlet-engine">
+                <h2>20. What is a web container? What is a servlet engine?</h2>
+                <p>Web Container is a java application that controls servlet. Servlet does not have a main() method, So they require a container to load them.</p>
+                <ul>
+                    <li>Container is a place where servlet gets deployed.</li>
+                </ul>
+                <h3>Functionality:</h3>
+                <ul>
+                    <li>Servlet Management: Web containers handle servlet lifecycle, loading, initializing, and invoking servlet methods for client requests.</li>
+                    <li>Request Handling: They receive HTTP requests and forward them to appropriate servlets, managing the response sent back.</li>
+                    <li>Thread Management: Web containers manage multiple threads efficiently.</li>
+                    <li>Security: Web containers enforce security measures like authentication, authorization, and secure communication.</li>
+                    <li>Resource Management: They manage server resources to ensure optimal performance and scalability.</li>
+                </ul>
+                <p>An example of a web container is Tomcat.</p>
+                <h4>Servlet Engine: [Same as Web container]</h4>
+            </section>
+
+            <section id="attacks">
+                <h2>21. Explain active attack and passive attack.</h2>
+                <h3>Active Attacks:</h3>
+                <p>Active attacks involve some modification of the data stream or the creation of a false stream.</p>
+                <h4>Types of Active Attacks:</h4>
+                <ol>
+                    <li>Masquerade: Takes place when one entity pretends to be different.</li>
+                    <li>Replay: Passive capture of the data unit and its subsequent retransmission to produce an unauthorized effect.</li>
+                    <li>Modification of messages: Some portion of a legitimate message is altered or the messages are delayed or reordered to produce an unauthorized effect.</li>
+                    <li>Denial of Service (DoS): Prevents or inhibits the normal use or management of communications facilities. This attack may have a specific target.</li>
+                </ol>
+                <h3>Passive Attacks:</h3>
+                <p>Passive attacks are in the nature of eavesdropping on, or monitoring of, transmissions. The goal of the opponent is to obtain information that is being transmitted.</p>
+                <h4>Types of Passive Attacks:</h4>
+                <ul>
+                    <li>Release of Message Content (Snooping): Obtaining sensitive or confidential information from intercepted messages or files.</li>
+                    <li>Traffic Analysis: Analyzing patterns of communication to derive information, even if message contents are encrypted.</li>
+                </ul>
+                <h3>Prevention Measures:</h3>
+                <p><strong>For active attacks:</strong> Implement strong authentication, integrity checks, and robust access controls.</p>
+                <p><strong>For passive attacks:</strong> Use encryption to protect message content and randomize traffic patterns to thwart analysis attempts.</p>
+            </section>
+
+            <section id="dos_rtp">
+                <h2>22. Explain Denial of Service (DoS) attacks. Discuss Real-time Transport Protocol (RTP).</h2>
+                <h3>Denial of Service (DoS) Attacks:</h3>
+                <p>A Denial-of-Service (DoS) attack is an attack meant to shut down a machine or network, making it inaccessible to its intended users.</p>
+                <p>DoS attacks accomplish this by flooding the target with traffic, or sending it information that triggers a crash.</p>
+                <h4>Methods of DoS Attacks:</h4>
+                <ul>
+                    <li>Flood attacks: Occur when the system receives too much traffic for the server to buffer, causing them to slow down and eventually stop. Popular flood attacks include:
+                        <ul>
+                            <li>Buffer overflow attacks: The concept is to send more traffic to a network address than the programmers have built the system to handle.</li>
+                            <li>ICMP flood: Leverages misconfigured network devices by sending spoofed packets that ping every computer on the targeted network.</li>
+                            <li>SYN flood: Sends a request to connect to a server, but never completes the handshake. Continues until all open ports are saturated with requests.</li>
+                        </ul>
+                    </li>
+                    <li>Exploiting vulnerabilities: Some DoS attacks exploit vulnerabilities that cause the target system or service to crash. In these attacks, input is sent that takes advantage of bugs in the target that subsequently crash or severely destabilize the system.</li>
+                </ul>
+                <h3>Real-time Transport Protocol (RTP):</h3>
+                <p>Real-time Transport Protocol (RTP) is a network protocol for the delivery of audio and video over the internet.</p>
+                <p>RTP is designed to provide end-to-end network transport functions suitable for applications transmitting real-time data, such as audio and video.</p>
+                <h4>Use of Real-time Transport Protocol:</h4>
+                <ul>
+                    <li>Voice over IP (VoIP): RTP is commonly used in VoIP systems to transmit audio over the internet. It allows for the real-time delivery of voice calls with low latency.</li>
+                    <li>Video conferencing: RTP is often used in video conferencing systems to transmit audio and video in real time.</li>
+                    <li>Streaming media: RTP is used in many streaming media applications to deliver audio and video over the internet.</li>
+                    <li>Telephony: RTP is used in many telephony systems to transmit audio and video between devices. It allows for the real-time communication of multiple parties in a call.</li>
+                    <li>Broadcast television: RTP is used in some broadcast television systems to transmit audio and video over the internet.</li>
+                </ul>
+            </section>
+                        
+            <section id="proxy_purpose">
+                <h2>23. What is the purpose of proxy?</h2>
+                <p>A proxy is like a middleman in computer networks.</p>
+                <p>The purpose of a proxy is to act as an intermediary between a client and a server, serving several key functions:
+                </p>
+                <ul>
+                    <li><strong>Boosting privacy:</strong> A correctly configured proxy server can shore up your digital security by
+                        masking your original IP address and replacing it with its own.</li>
+                    <li><strong>Bypassing blocks:</strong> You can regain access to blocked websites by connecting to a proxy
+                        server—so long as the proxy itself isn't blocked.</li>
+                    <li><strong>Igniting firewalls:</strong> Proxy servers sit between web browsers and the internet, meaning they
+                        can block certain web domains.</li>
+                    <li><strong>Improving performance:</strong> Proxies can store local copies of sites so that they load faster the
+                        next time you access them. Plus, if multiple people try to access one site all at once, the proxy can send
+                        one request and forward it to them all.</li>
+                    <li><strong>Digital convenience:</strong> A proxy server is a much more convenient way to allow or deny certain
+                        domains.</li>
+                </ul>
+            </section>
+
+            <section id="packet_filtering">
+                <h2>24. Write short note on a. Packet Filtering</h2>
+                <p>Packet filtering is a firewall feature that allows or drops data packets based on simple, pre-defined rules regarding IP addresses, ports, or protocols.</p>
+                <h3>Types of packet filtering:</h3>
+                <ul>
+                    <li><strong>Static packet filtering firewalls:</strong> Static packet filters are so-called because users set firewall rules and these rules remain the same until they are changed.</li>
+                    <li><strong>Dynamic packet filtering firewalls:</strong> Dynamic packet filtering is named because dynamic firewalls adjust the way they operate according to pre-set parameters.</li>
+                </ul>
+                <p>Mostly following rules are used:</p>
+                <ul>
+                    <li><strong>Source and Destination IP address:</strong> Packets from certain IP addresses are only allowed to pass blocking other addresses.</li>
+                    <li><strong>Source and destination ports:</strong> Packets from defined ports are accepted.</li>
+                    <li><strong>Direction of traffic:</strong> Allows traffic only in defined direction. That is allows only either inbound packets or outbound packets.</li>
+                </ul>
+                <h3>Advantages of Packet Filtering</h3>
+                <ul>
+                    <li><strong>Easy setup:</strong> Utilizes understandable options that decrease installation time.</li>
+                    <li><strong>Fast defense:</strong> Enables simple, efficient, and quick allow and drop decisions.</li>
+                    <li><strong>Inexpensive deployment:</strong> The least expensive firewall options.</li>
+                    <li><strong>Light resources:</strong> Uses minimal compute resources (memory, CPU processing, etc.) which frees up resources for more computationally intensive features and capabilities.</li>
+                </ul>
+            </section>
+
+            <section id="proxy_firewall">
+                <h2>b. Proxy Firewall</h2>
+                <p>A proxy firewall is a network security system that protects network resources by filtering messages at the application layer.</p>
+                <ul>
+                    <li>Proxy Firewalls are the most secure types of firewalls, because they work at the application level.</li>
+                    <li>Firewall proxy servers centralize all activity for an application into a single server.</li>
+                </ul>
+                <h3>Advantages:</h3>
+                <ul>
+                    <li><strong>Enhanced Security:</strong> Proxy firewalls inspect and filter traffic at the application layer, allowing them to detect and block various types of threats, including viruses, malware, and unauthorized access attempts.</li>
+                    <li><strong>Access Control:</strong> This enables organizations to restrict access to certain websites, services, or protocols, thus minimizing the risk of data breaches and unauthorized access.</li>
+                    <li><strong>Content Filtering:</strong> Proxy firewalls can also be configured to filter content based on predefined criteria, such as URL categories, keywords, or file types.</li>
+                </ul>
+                <h3>Drawbacks:</h3>
+                <ul>
+                    <li>The proxy-based firewalls are not compatible with all protocols.</li>
+                    <li>Another major drawback of proxy firewalls is latency, especially during heavy traffic.</li>
+                </ul>
+            </section>
+
+            <section id="three_way_handshake">
+                <h2>c. Three-way Handshaking TCP Connection Establishment</h2>
+                <p>A TCP connection is a connection-oriented protocol used to establish and maintain communication between two computers. A network connection is established between a client and server in three steps.</p>
+                <ol>
+                    <li><strong>Step 1 (SYN):</strong> In the first step, the client wants to establish a connection with a server, so it sends a segment with SYN (Synchronize Sequence Number) which informs the server that the client is likely to start communication and with what sequence number it starts segments with.</li>
+                    <li><strong>Step 2 (SYN + ACK):</strong> The server responds to the client request with SYN-ACK signal bits set. Acknowledgement (ACK) signifies the response of the segment it received and SYN signifies with what sequence number it is likely to start the segments with.</li>
+                    <li><strong>Step 3 (ACK):</strong> In the final step, the client acknowledges the response of the server, and they both establish a reliable connection with which they will start the actual data transfer.</li>
+                </ol>
+                <h3>Advantages:</h3>
+                <ul>
+                    <li>The three-way handshake ensures a reliable connection establishment process.</li>
+                    <li>Three-way handshake helps prevent unauthorized access or data interception.</li>
+                    <li>The three-way handshake allows each party to confirm the successful receipt of synchronization information from the other party.</li>
+                </ul>
+                <h3>Disadvantage:</h3>
+                <p>In situations where resources are limited or network traffic is heavy, the overhead associated with the handshake process can impact overall system performance.</p>
+            </section>
+            
+            <section id="vpn">
+                <h2>d. VPN</h2>
+                <p>VPN stands for Virtual Private Network. It refers to a safe and encrypted network that allows you to use network resources in a remote manner.</p>
+                <ul>
+                    <li>Using VPN, you can create a safe connection over a less secure network.</li>
+                </ul>
+                <h3>VPN Work Process:</h3>
+                <ul>
+                    <li>VPN works by creating a secure tunnel using powerful VPN protocols.</li>
+                    <li>It hides your IP address behind its own IP address that encrypts all your communication.</li>
+                    <li>Thus, your communication passes through a secure tunnel that allows you to use network resources freely and secretly.</li>
+                </ul>
+                <h3>VPN Protocols:</h3>
+                <p>There are several different VPN protocols that are used to create secure networks:</p>
+                <ul>
+                    <li>IP security (IPsec)</li>
+                    <li>Point to Point Tunneling Protocol (PPTP)</li>
+                    <li>Secure Sockets Layer (SSL) and Transport Layer Security (TLS)</li>
+                </ul>
+            </section>
+
+            <section id="mta">
+                <h2>25. What is the responsibility of the Mail Transfer Agent?</h2>
+                <p>MTAs transfer electronic mail messages between sender and recipient computers using the SMTP protocol, ensuring efficient message transmission.</p>
+                <p>MTA is responsible for many tasks in the email delivery process:</p>
+                <ul>
+                    <li><strong>Queuing:</strong> Storing emails in a queue for sequential dispatch to the recipient's server.</li>
+                    <li><strong>Optimal Scheduling:</strong> Determining the best timing for email dispatch considering recipient time zones and other relevant factors.</li>
+                    <li><strong>Connection Oversight:</strong> MTAs manage the initiation, maintenance, and termination of network connections crucial for email transmission.</li>
+                    <li><strong>Data Transmission:</strong> They facilitate the transfer of email content, attachments, and other relevant data between network points.</li>
+                    <li><strong>Generating bounces:</strong> Generating and transmitting bounce messages to the sender for undelivered emails.</li>
+                    <li><strong>Tracking delivery status:</strong> Monitoring and logging the delivery progress of each email—whether delivered, bounced, or deferred.</li>
+                </ul>
+            </section>
             
             
         </main>
