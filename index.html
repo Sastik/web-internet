@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web & Internet Technology</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="sidebar">
+        <h2>Content</h2>
+        <ul>
+            <li><a href="#servlet-description">1. Servlet description</a></li>
+            <li><a href="#comparison-intranet-extranet-internet">2. comparison intranet, extranet, internet</a></li>
+
+        </ul>
+    </div>
+    <div class="main-content">
+        <header>
+            <h1>Web & Internet Technology</h1>
+        </header>
+        <main>
+            <section id="servlet-description">
+                <h2>1. What is servlet? What do you understand by servlet API? Describe the life cycle of a servlet.
+                </h2>
+                <p>Servlet is a technology used to create web applications. It works on the server side and is capable
+                    of handling complex requests obtained from the web server.</p>
+                <h3>SERVLET API:</h3>
+                <p>To create Java Servlets, we need to use Servlet API, which contains all the necessary interfaces and
+                    classes. Servlet API has 2 packages:</p>
+                <ul>
+                    <li>javax.servlet</li>
+                    <li>javax.servlet.http</li>
+                </ul>
+                <p><b>SERVLET LIFE CYCLE:</b></p>
+                <ol>
+                    <li><b>Servlet class is loaded:</b> The classloader loads the servlet class when the first request
+                        for the servlet is received by the web container.</li>
+                    <li><b>Servlet instance is created:</b> The web container creates the instance of a servlet after
+                        loading the servlet class. The servlet instance is created only once in the servlet life cycle.
+                    </li>
+                    <li><b>init():</b> The web container calls the init method only once after creating the servlet
+                        instance. The init method is used to initialize the servlet.</li>
+                    <li><b>service():</b> The web container calls the service() method each time there is a new request
+                        to the servlet. This method checks the HTTP request type and calls the appropriate methods
+                        (doGet, doPost, etc).</li>
+                    <li><b>destroy():</b> This method is called just once at the end of the Servlet's life cycle. It
+                        helps perform clean-up activities and removes the servlet from the container.</li>
+                </ol>
+            </section>
+
+            <section id="comparison-intranet-extranet-internet">
+                <h2>2. Give a comparison for Intranet, Extranet, and Internet.</h2>
+                <table>
+                    <tr>
+                        <th>PARAMETER</th>
+                        <th>INTERNET</th>
+                        <th>INTRANET</th>
+                        <th>EXTRANET</th>
+                    </tr>
+                    <tr>
+                        <td>Type</td>
+                        <td>Public</td>
+                        <td>Private</td>
+                        <td>Private</td>
+                    </tr>
+                    <tr>
+                        <td>Objective</td>
+                        <td>Information sharing across the globe.</td>
+                        <td>Information sharing between staff/employees.</td>
+                        <td>Information sharing between different organizations.</td>
+                    </tr>
+                    <tr>
+                        <td>Accessibility</td>
+                        <td>Anyone</td>
+                        <td>Staff/Employees</td>
+                        <td>Limited access by some other organizations.</td>
+                    </tr>
+                    <tr>
+                        <td>Data Security</td>
+                        <td>Not secured</td>
+                        <td>Secured</td>
+                        <td>Secured</td>
+                    </tr>
+                    <tr>
+                        <td>Network Area</td>
+                        <td>Large</td>
+                        <td>Small</td>
+                        <td>Small</td>
+                    </tr>
+                    <tr>
+                        <td>Authentication</td>
+                        <td>Not required</td>
+                        <td>Required</td>
+                        <td>Required</td>
+                    </tr>
+                    <tr>
+                        <td>Example</td>
+                        <td>What we are normally using is internet.</td>
+                        <td>WIPRO using an internal network.</td>
+                        <td>DELL and Intel using a network.</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="ipv4-vs-ipv6">
+                <h2>3. State the difference between IPv4 and IPv6.</h2>
+                <table>
+                    <tr>
+                        <th>IPv4</th>
+                        <th>IPv6</th>
+                    </tr>
+                    <tr>
+                        <td>The Address Space is 32 bits.</td>
+                        <td>The space is 128 bits.</td>
+                    </tr>
+                    <tr>
+                        <td>Numeric.</td>
+                        <td>Alphanumeric.</td>
+                    </tr>
+                    <tr>
+                        <td>The length of header is 20 bytes.</td>
+                        <td>The length of header is 40.</td>
+                    </tr>
+                    <tr>
+                        <td>4 bytes for each address in the header.</td>
+                        <td>16 bytes for each address in the header.</td>
+                    </tr>
+                    <tr>
+                        <td>Has Checksum fields.</td>
+                        <td>Doesn’t have checksum fields.</td>
+                    </tr>
+                    <tr>
+                        <td>Bits are divided by a period.</td>
+                        <td>Bits are divided by a colon.</td>
+                    </tr>
+                    <tr>
+                        <td>Security is dependent on applications.</td>
+                        <td>Implements an IP security(IPSec) protocol.</td>
+                    </tr>
+                    <tr>
+                        <td>The Fragmentation is done both by sending host and routers.</td>
+                        <td>The Fragmentation is done by sending host and there is no role of the routers.</td>
+                    </tr>
+                    <tr>
+                        <td>Networks are configured manually or with DHCP.</td>
+                        <td>Networks are configured automatically.</td>
+                    </tr>
+                </table>
+            </section>
+            
+            <section id="http-protocol">
+                <h2>4. What is the meaning of the term 'Hypertext Transfer Protocol' in www environment? Why is HTTP stateless?</h2>
+                <p>Hypertext transfer protocol or HTTP is a protocol that allows the transfer of information on the World Wide Web between clients and servers.</p>
+                <ul>
+                    <li>Accessing Data on the Web: It serves as a protocol for accessing data on the World Wide Web (www), allowing users to retrieve web pages, images, videos, and other resources.</li>
+                    <li>Support for Various Data Formats: HTTP can transfer data in multiple formats, including plain text, hypertext, audio, video, etc.</li>
+                    <li>Efficiency in Hypertext Environment: The term "Hypertext Transfer Protocol" reflects its efficiency in managing hypertext environments.</li>
+                </ul>
+                <p>HTTP is called a stateless protocol because in this each command is executed independently, without any knowledge of the commands that came before it.</p>
+                <ul>
+                    <li>In this protocol, the communication generally takes place over a TCP/IP protocol.</li>
+                    <li>Request-Response Model: HTTP follows a request-response model. Clients send requests to servers, which respond with requested resources. After the response, the connection ends, not retaining any previous interaction data.</li>
+                    <li>Simplicity and Scalability: HTTP's statelessness simplifies communication. Each request is independent, easing management and scalability as servers don't store client session data.</li>
+                </ul>
+            </section>
+            
+            <section id="url-components">
+                <h2>5. What is URL? Explain different component of URL.</h2>
+                <p>A Uniform Resource Locator (URL) is a set address for locating a unique resource on the internet, such as a file or an app.</p>
+                <ul>
+                    <li>It is used to indicate the location of a web resource to access the web pages.</li>
+                    <li>Example: https://www.example.com/category-A/subcategory-A1/model-123.html</li>
+                </ul>
+                <h3>Components of a URL:</h3>
+                <ul>
+                    <li><b>Protocol:</b> The protocol or scheme of a URL indicates the method that will be used for transmitting or exchanging data. In the example URL above, https:// is the URL's secure protocol.</li>
+                    <li><b>Domain:</b> The domain or hostname of a URL is a user-friendly expression of the Internet Protocol (IP) address of a website. It points to the location of the website's host server. In the example above, the domain is www.example.com.</li>
+                    <li><b>Path:</b> The path that follows the domain name inside a URL points to a specific file or other resource location. It can also include a query string. In our example URL, /category-A/subcategory-A1/model-123.html shows the path of the URL, which in this example, ends in a product page.</li>
+                    <li><b>Query:</b> The query string, also known as a fragment identifier, is frequently used for internal searches and is commonly preceded by a question mark (?). In our example URL Model 123 is the query.</li>
+                </ul>
+            </section>
+            
+            <section id="dynamic-routing-vs-static-routing">
+                <h2>6. Why dynamic routing is preferred over static routing algorithm? Difference between static routing and dynamic routing</h2>
+                <p>Static Routing: Static Routing is also known as non-adaptive routing which doesn’t change the routing table unless the network administrator changes or modifies them manually.</p>
+                <p>Dynamic Routing: Dynamic routing is also known as adaptive routing which changes the routing table according to the change in topology.</p>
+                <p>Dynamic routing provides key advantages over static routing, including scalability and adaptability. A dynamically routed network can grow larger more quickly and is able to adapt to changes in the network topology.</p>
+                <table>
+                    <tr>
+                        <th>Static Routing</th>
+                        <th>Dynamic Routing</th>
+                    </tr>
+                    <tr>
+                        <td>Routes are user-defined.</td>
+                        <td>Routes are updated according to the topology automatically.</td>
+                    </tr>
+                    <tr>
+                        <td>Static routing provides high or more security.</td>
+                        <td>Dynamic routing provides less security.</td>
+                    </tr>
+                    <tr>
+                        <td>Implemented in small networks.</td>
+                        <td>Implemented in large networks.</td>
+                    </tr>
+                    <tr>
+                        <td>Additional resources are not required.</td>
+                        <td>Additional resources are required.</td>
+                    </tr>
+                    <tr>
+                        <td>Less Bandwidth is required.</td>
+                        <td>More Bandwidth is required.</td>
+                    </tr>
+                    <tr>
+                        <td>Difficult to configure.</td>
+                        <td>Easy to configure.</td>
+                    </tr>
+                </table>
+            </section>
+            
+            <section id="http-get-vs-post">
+                <h2>7. Distinguish between GET and POST method in HTTP.</h2>
+                <p>The HTTP Get method is mainly used on the client (Browser) side to send a request to a specified server to get certain data or resources.</p>
+                <p>The HTTP Post method is mainly used at the client side to send data to a Specified server in order to create or rewrite a particular data.</p>
+                <table>
+                    <tr>
+                        <th>HTTP GET</th>
+                        <th>HTTP POST</th>
+                    </tr>
+                    <tr>
+                        <td>Only a limited portion of data can be transmitted.</td>
+                        <td>A massive amount of data can be transmitted.</td>
+                    </tr>
+                    <tr>
+                        <td>Data is transmitted in the header.</td>
+                        <td>Data is transmitted in the body.</td>
+                    </tr>
+                    <tr>
+                        <td>Details are disclosed in the URL bar.</td>
+                        <td>Information is not disclosed in the URL bar.</td>
+                    </tr>
+                    <tr>
+                        <td>The GET request is less secure.</td>
+                        <td>The POST request is comparatively more secure.</td>
+                    </tr>
+                    <tr>
+                        <td>We can bookmark this request.</td>
+                        <td>We cannot bookmark this request.</td>
+                    </tr>
+                    <tr>
+                        <td>The GET method is more efficient.</td>
+                        <td>The POST method is less efficient.</td>
+                    </tr>
+                </table>
+            </section>
+            
+            <section id="tcp-vs-udp">
+                <h2>8. What are the differences between TCP and UDP?</h2>
+                <p>The transmission control protocol (TCP) is defined as a connection-oriented communication protocol that allows computing devices and applications to send data via a network and verify its delivery.</p>
+                <p>The User Datagram Protocol (UDP) is simplest Transport Layer communication protocol available of the TCP/IP protocol suite.</p>
+                <p>Transmission control protocol (TCP) and user datagram protocol (UDP) are foundational pillars of the internet, enabling different types of data transmission from a network source to the destination. TCP is more reliable, while UDP prioritizes speed and efficiency.</p>
+                <table>
+                    <tr>
+                        <th>TCP</th>
+                        <th>UDP</th>
+                    </tr>
+                    <tr>
+                        <td>TCP is connection-oriented while UDP is connectionless.</td>
+                        <td>UDP is connectionless while TCP is connection-oriented.</td>
+                    </tr>
+                    <tr>
+                        <td>TCP leverages more error-checking mechanisms than UDP.</td>
+                        <td>UDP has fewer error-checking mechanisms compared to TCP.</td>
+                    </tr>
+                    <tr>
+                        <td>TCP sends data in a particular sequence.</td>
+                        <td>There is no fixed order for UDP protocol.</td>
+                    </tr>
+                    <tr>
+                        <td>TCP is more reliable than UDP.</td>
+                        <td>UDP is faster and more efficient than TCP.</td>
+                    </tr>
+                    <tr>
+                        <td>TCP leverages flow control.</td>
+                        <td>UDP does not leverage flow control.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>UDP is suitable for live and real-time data transmission.</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="ftp-transmission-modes">
+                <h2>9. Explain different file transmission modes across FTP data connection.</h2>
+                <p>The full form of FTP is File Transfer Protocol. It is a standard internet protocol provided by TCP/IP which is used for transmitting the files from one system to another system.</p>
+                <ul>
+                    <li>The main purpose of FTP is for transferring the web page files from one system to the computer which acts as a server for other computers on the internet.</li>
+                    <li>It is also helpful for downloading the files to compute from other servers.</li>
+                </ul>
+                <h3>Advantages:</h3>
+                <ul>
+                    <li>Multiple transfers</li>
+                    <li>Efficiency</li>
+                    <li>Security</li>
+                    <li>Continuous transfer</li>
+                    <li>Simple</li>
+                    <li>Speed</li>
+                </ul>
+                <h3>Disadvantages:</h3>
+                <ul>
+                    <li>FTP is not compatible with every system.</li>
+                    <li>Attackers can quickly identify the FTP password.</li>
+                    <li>Does not allow running of simultaneous transfers to multiple receivers.</li>
+                </ul>
+                <p>FTP transfer files using any of the following modes:</p>
+                <ul>
+                    <li><b>Stream Mode:</b> It is the default mode. In stream mode, the data is transferred from FTP to TCP in stream bytes.</li>
+                    <li><b>Block Mode:</b> In block mode, the data is transferred from FTP to TCP in the form of blocks, and each block followed by a 3-byte header. The first byte of the block contains the information about the block so it is known as the description block and the other two bytes contain the size of the block.</li>
+                    <li><b>Compressed Mode:</b> This mode is used to transfer big files. The compressed mode is used to decrease the size of the file into small and send it on the internet.</li>
+                </ul>
+            </section>
+            
+            <section id="smtp">
+                <h2>10. Write a short note on SMTP.</h2>
+                <p>The Simple Mail Transfer Protocol (SMTP) is a set of rules for communication that enables applications to send electronic mail over the internet.</p>
+                <ul>
+                    <li>It is a program used for sending messages to other computer users based on e-mail addresses.</li>
+                </ul>
+                <h3>Advantages of SMTP:</h3>
+                <ul>
+                    <li>It allows for bulk mailing.</li>
+                    <li>Low cost and wide coverage area.</li>
+                    <li>Offer choices for email tracking.</li>
+                </ul>
+                <h3>Disadvantages of SMTP:</h3>
+                <ul>
+                    <li>SMTP’s common port can be blocked by several firewalls.</li>
+                    <li>SMTP security is a bigger problem.</li>
+                    <li>If a message is longer than a certain length, SMTP servers may reject the entire message.</li>
+                </ul>
+                <h3>Working of SMTP:</h3>
+                <ul>
+                    <li><b>Composition of Mail:</b> Users compose emails with a Mail User Agent (MUA), containing a body and a header.</li>
+                    <li><b>Submission of Mail:</b> Completed emails are sent to the SMTP server on TCP port 25.</li>
+                    <li><b>Delivery of Mail:</b> SMTP routes emails based on recipient domain; if different, it goes through Mail Transfer Agent (MTA) and MX record lookup.</li>
+                    <li><b>Receipt and Processing of Mail:</b> Incoming emails are received by the exchange server, then stored by the Mail Delivery Agent (MDA).</li>
+                    <li><b>Access and Retrieval of Mail:</b> Users retrieve stored emails from MDA using MUA and login credentials.</li>
+                </ul>
+            </section>
+
+            <section id="pre-and-del-tags">
+                <h2>11. State the use of &lt;pre&gt; and &lt;del&gt; tags.</h2>
+                <h3>HTML &lt;pre&gt; tag:</h3> <p>The HTML &lt;pre&gt; tag is used to specify pre-formatted texts. Texts within &lt;pre&gt;.......</pre> tag is displayed in a fixed-width font.</p>
+                <ul>
+                    <li>It maintains both space and line break.</li>
+                    <li>It is widely used to display language examples e.g. Java, C#, C, C++ etc because it displays the code as it is typed.</li>
+                    <li>The HTML &lt;pre&gt; tag also supports the width attribute.</li>
+                </ul>
+                <h3>HTML &lt;del&gt; tag:</h3> <p> HTML &lt;del&gt; tag is used to represent the range of text that has been deleted/removed from the document.</p>
+                <ul>
+                    <li>It is used as a Markup for the deleted content.</li>
+                    <li>The browser generally renders it by strike a line through the deleted text, although this can be changed using the CSS property.</li>
+                    <li>To identify the deleted text and inserted text use &lt;ins&gt; tag with &lt;del&gt; which will display deleted and inserted text in a document.</li>
+                </ul>
+            </section>
+
+            <section id="scripting-features">
+                <h2>12. Write down the features of the scripting language. How is the markup language different from the scripting language?</h2>
+                <p>A Scripting Language is a series of commands within an executable file. The language is designed to integrate and communicate with other programming languages.</p>
+                <h3>Features of scripting language:</h3>
+                <ul>
+                    <li>Interpreted: scripting languages are interpreted rather than compiled. This means that the source code is translated in real time once it has been executed, making it more flexible and easier to write.</li>
+                    <li>Objective: they are designed for very specific tasks e.g., web programming, artificial intelligence or task automation in operating systems.</li>
+                    <li>Variable declaration: scripting languages use what is known as dynamic typing. This means that data variables can be declared more flexibly throughout the code.</li>
+                    <li>Server-side vs client-side: scripts designed with these languages can run on both a web server and in a browser on the user's device.</li>
+                    <li>Memory: the memory employed in running a script is managed automatically by whichever interpreter is used.</li>
+                    <li>Cross-platform: Scripting languages integrate extremely well into all system types and even with other language types.</li>
+                </ul>
+                <p>Markup languages are computer languages that are used to structure, format, or define relationships between different parts of text documents with the help of symbols or tags inserted in the document.</p>
+                <h3>Benefits of Using Markup:</h3>
+                <ul>
+                    <li>They Improve SEO: This structuring helps search engines like Google understand the information on websites better.</li>
+                    <li>They Create Consistent Layouts</li>
+                    <li>They Enhance Accessibility.</li>
+                </ul>
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Markup Language</th>
+                        <th>Scripting Language</th>
+                    </tr>
+                    <tr>
+                        <td>Purpose</td>
+                        <td>Primarily for visual presentation of data.</td>
+                        <td>Designed for integration and communication.</td>
+                    </tr>
+                    <tr>
+                        <td>Role</td>
+                        <td>Determines appearance of data on software.</td>
+                        <td>Integrates with other languages.</td>
+                    </tr>
+                    <tr>
+                        <td>Examples</td>
+                        <td>HTML, XML, SML</td>
+                        <td>JavaScript, PHP, VBScript</td>
+                    </tr>
+                    <tr>
+                        <td>Interaction</td>
+                        <td>Focuses on aesthetics.</td>
+                        <td>Works with other programming/markup languages.</td>
+                    </tr>
+                    <tr>
+                        <td>Use</td>
+                        <td>Web page design, document structuring.</td>
+                        <td>Backend development, server-side scripting.</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="xml-superior-html-parser-types">
+                <h2>13. Why is XML superior to HTML, What are the different types of parser used in XML?</h2>
+                <p>HTML is used for displaying and formatting data on the web, while XML is designed to store and transport data.</p>
+                <h3>The benefits of using XML compared to HTML include:</h3>
+                <ol>
+                    <li>Data Structure: XML allows for more flexible and customizable data structuring, making it suitable for representing complex data.</li>
+                    <li>Platform-Independent: XML is platform-independent, meaning it can be used on any operating system or device.</li>
+                    <li>Extensibility: XML is extensible, allowing users to define their own tags and document structures, making it suitable for a wide range of applications.</li>
+                    <li>Data Exchange: XML is often used for data interchange between different systems and applications due to its structured and standardized format.</li>
+                </ol>
+                <h3>Different Types of Parser Used In XML:</h3>
+                <ol type="a">
+                    <li>
+                        <strong>DOM (Document Object Model):</strong> A DOM document is an object which contains all the information of an XML document. It is composed like a tree structure.
+                        <p>Features of DOM Parser</p>
+                        <ul>
+                            <li>A DOM Parser creates an internal structure in memory which is a DOM document object and the client applications get information of the original XML document by invoking methods on this document object.</li>
+                            <li>DOM Parser has a tree-based structure.</li>
+                        </ul>
+                        <p>Advantages</p>
+                        <ul>
+                            <li>It supports both read and write operations and the API is very simple to use.</li>
+                            <li>It is preferred when random access to widely separated parts of a document is required.</li>
+                        </ul>
+                        <p>Disadvantages</p>
+                        <ul>
+                            <li>It is memory inefficient. (consumes more memory because the whole XML document needs to loaded into memory).</li>
+                            <li>It is comparatively slower than other parsers.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>SAX (Simple API for XML):</strong> A SAX Parser implements SAX API. This API is an event-based API and less intuitive.
+                        <p>Features of SAX Parser</p>
+                        <ul>
+                            <li>It does not create any internal structure.</li>
+                            <li>Clients does not know what methods to call, they just overrides the methods of the API and place his own code inside method.</li>
+                            <li>It is an event based parser, it works like an event handler in Java.</li>
+                        </ul>
+                        <p>Advantages</p>
+                        <ul>
+                            <li>It is simple and memory efficient.</li>
+                            <li>It is very fast and works for huge documents.</li>
+                        </ul>
+                        <p>Disadvantages</p>
+                        <ul>
+                            <li>It is event-based so its API is less intuitive.</li>
+                            <li>Clients never know the full information because the data is broken into pieces.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </section>
+            </section>
+
+            <section id="html-image-map-xml-tree">
+                <h2>14. Write a short note on a) HTML Image Map b) XML Tree.</h2>
+                <p><h3>HTML Image Map:</h3> An Image Map refers to the clickable image having a clickable area that can be used to navigate to the various link to other web pages or the specific section of the same web page.</p>
+                <ul>
+                    <li>The &lt;map&gt; tag can be used to define the image map & the clickable area inside the image can be defined with the &lt;area&gt; tag.</li>
+                    <li>Purpose: HTML Image Maps are used to make certain areas of an image clickable, allowing users to interact with specific parts of the image rather than the image as a whole.</li>
+                </ul>
+                <p><h3>XML Tree:</h3> XML documents form a tree structure that starts at "the root" and branches to "the leaves".</p>
+                <ul>
+                    <li>XML documents are formed as element trees.</li>
+                    <li>An XML tree starts at a root element and branches from the root to child elements.</li>
+                    <li>All elements can have sub elements (child elements)</li>
+                </ul>
+                <pre>
+                    <code>
+                        &lt;root&gt;
+                              &lt;child&gt;
+                                    &lt;subchild&gt;.....&lt;/subchild&gt;
+                            &lt;/child&gt;
+                        &lt;/root&gt;
+                    </code>
+                </pre>
+                
+                <ul>
+                    <li>The terms parent, child, and sibling are used to describe the relationships between elements.</li>
+                    <li>All elements can have text content and attributes.</li>
+                </ul>
+            </section>
+
+            <section id="web-browser-cookies">
+                <h2>15. What are web browser cookies?</h2>
+                <p>A cookie is a piece of data from a website that is stored within a web browser that the website can retrieve at a later time.</p>
+                <ul>
+                    <li>Cookies are used to tell the server that users have returned to a particular website.</li>
+                    <li>Cookies help websites remember users and track their activities to provide a personalised experience.</li>
+                </ul>
+                <h3>Types & uses:</h3>
+                <ul>
+                    <li><strong>Session cookies:</strong> Temporary cookies that exist as long as the browser session is active.
+                    
+                      <ul>
+                        <li>Deleted once the browser is closed or the user's session becomes inactive</li>
+                        <li>Mainly used for maintaining user sessions, such as authentication</li>
+                      </ul>
+                    </li>
+                    <li><strong>Persistent cookies:</strong> Also called permanent or long-term cookies. Stored on the user's device for a specific period.
+                        <ul>
+                            <li>Used for long-term tracking and remembering user preferences</li>
+                          </ul>
+                    </li>
+                    <li><strong>First-party cookies:</strong> Set by the website currently being visited by the user.
+                        <ul>
+                            <li>Primarily used for enhancing user experience, collecting analytics data, and remembering settings like language preferences</li>
+                          </ul>
+                    </li>
+                    <li><strong>Third-party cookies:</strong> Collect data about browsing habits to serve targeted ads or analytics.
+                        <ul>
+                            <li>Often used for cross-site tracking and advertising purposes</li>
+                          </ul>
+                    </li>
+                </ul>
+                <p>Cookies can raise privacy concerns when they are used for tracking and profiling without user consent.</p>
+            </section>
+
+            <section id="difference-applet-java-application">
+                <h2>16. What is the difference between an Applet and a Java Application?</h2>
+                <p>Java applications are just like a Java program that can be executed independently without using the web browser.</p>
+                <ul>
+                    <li>A Java application does not necessarily require a graphical user interface for executing a Java application.</li>
+                </ul>
+                <p>Java Applets are small Java programs that are designed to be included with the HTML web document. They require a Java-enabled web browser for execution.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Parameters</th>
+                            <th>Java Application</th>
+                            <th>Java Applet</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Main() Method</td>
+                            <td>The usage of the main() is a prerequisite here.</td>
+                            <td>It does not require the usage of any main() method.</td>
+                        </tr>
+                        <tr>
+                            <td>Execution</td>
+                            <td>It cannot run alone, but it requires JRE for its execution.</td>
+                            <td>It cannot run independently but requires APIs for its.</td>
+                        </tr>
+                        <tr>
+                            <td>Installation</td>
+                            <td>One needs to install a Java application priorly and explicitly on a local computer.</td>
+                            <td>A Java applet does not require any prior installation.</td>
+                        </tr>
+                        <tr>
+                            <td>Read and Write Operations</td>
+                            <td>The Java applications are capable of performing the read and write operations on various files present in a local computer.</td>
+                            <td>A Java applet cannot perform these applications on any local computer.</td>
+                        </tr>
+                        <tr>
+                            <td>Restrictions</td>
+                            <td>These can easily access the file or data present in a computer system or device.</td>
+                            <td>These cannot access the file or data available on any system or local computers.</td>
+                        </tr>
+                        <tr>
+                            <td>Security</td>
+                            <td>Java applications are pretty trusted, and thus, come with no security concerns.</td>
+                            <td>Java applets are not very trusted. Thus, they require security.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            
+            
+        </main>
+        <footer>
+            <p>© 2024 Web & Internet __SasTik</p>
+        </footer>
+    </div>
+</body>
+
+</html>
